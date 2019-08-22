@@ -1,100 +1,40 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>调查问卷</title>
-        <style>
-        select{
-            width:20em;
-            display:block;
-            margin:10px
-        }
-        </style>
-    </head>
-    <body>
-        <h3>调查问卷</h3>
-        <form method="POST" action="result.html">
-            姓名:
-            <input type="text" name="name" required/>
-            <br />
-            职业:
-            <input type="text" name="career" required/>
-            <br />
-            年龄:
-            <input type="number" name="age" min="0" max="100" required />
-        <hr />
-        <p>问题(单选)：</p>
-            <select required>
-                <option value="1">A</option>
-                <option value="2">B</option>
-                <option value="3">C</option>
-            </select>
-        <p>问题(多选)</p>
-        <select required>
-            <optgroup label="1">
-                    <option value="4">A</option>
-                    <option value="5">B</option>
-                    <option value="6">C</option>
-            </optgroup>
-            <optgroup label="2">
-                    <option value="7">a</option>
-                    <option value="8">b</option>
-                    <option value="9">c</option>
-            </optgroup>
-        </select >
-        <p>问题(多选)</p>
-        <select multiple required>
-                <option value="10">A</option>
-                <option value="11">B</option>
-                <option value="12">C</option>
-        </select>
-        <p>问题(多选)</p>
-        <select multiple size="8" required>
-            <optgroup label="1">
-                    <option value="13">A</option>
-                <option value="14">B</option>
-                <option value="15">C</option>
-            </optgroup>
-            <optgroup label="2">
-                    <option value="16">a</option>
-                    <option value="17">b</option>
-                    <option value="18">c</option>
-            </optgroup>
-        </select >
-        问题（单选）:
-        <br />
-                <input type="radio" name="gender" value="M" checked  />
-                男
-                <br />
-                <input type="radio" name="gender" value="F" />
-                女
-                <br />
-        问题（单选）:
-        <br />
-                <input type="radio" name="a" value="M" checked/>
-                A
-                <br />
-                <input type="radio" name="a" value="F"/>
-                B
-                <br />
-                <input type="radio" name="a" value="L"/>
-                C
-                <br />
-        问题（多选）：
-        <br/>
-            <input type="checkbox" name="group1" value="z" checked />
-            A
-        <br />
-        <input type="checkbox" name="group1" value="x" />
-            B
-        <br />
-        <input type="checkbox" name="group1" value="c" />
-            C
-        <br />
-        <input type="checkbox" name="group1" value="v" />
-            D
-            <br />                          
-                <input type="submit" value="提交" />
-           </form>   
-    </body>
-</html>
+function test(){
+    alert('Hello html5!!!!');
+}
+
+function changeTimeTo4(){
+var video=document.getElementById("video");
+video.currentTime=240;
+video.play();
+}
+   //绘制线段：
+   function drawLine(){
+   var c=document.getElementById("mycanvas1");
+   var ctx=c.getContext("2d");
+   ctx.moveTo(50,50);
+   ctx.lineTo(50,100);
+   ctx.lineTo(100,100);
+   ctx.lineTo(100,50);
+   ctx.lineTo(50,50)
+   ctx.fill();
+   }
+    //绘制圆弧：
+    function drawArc(){
+    var c=document.getElementById("mycanvas2");
+    var ctx=c.getContext("2d");
+    ctx.arc(60,75,50,0,Math.PI/2,true);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(200,75,50,0,Math.PI*2,true);
+     ctx.fillStyle="yellow";
+    ctx.fill();
+    }
+     //绘制图片
+     function drawImage(){
+     var c=document.getElementById("mycanvas3");
+     var ctx=c.getContext("2d");
+     var img=new Image();
+     img.src="img/2.jpg";
+     ctx.drawImage(img,0,0,300,200);
+     }
+    
